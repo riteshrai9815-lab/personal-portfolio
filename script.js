@@ -1,27 +1,37 @@
-// Wait until the webpage has completely loaded
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+    const title = document.getElementById("typing-title");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    const year = document.getElementById("year");
 
-    // Find the main heading
-    const heading = document.querySelector(".hero h1");
-
-    // Save the original text
-    const originalText = heading.textContent;
-
-    // Clear the heading
-    heading.textContent = "";
-
-    // Create a typing effect
+    const text = "Aspiring Software Developer";
     let index = 0;
 
-    function typeText() {
-        if (index < originalText.length) {
-            heading.textContent += originalText.charAt(index);
-            index++;
+    title.textContent = "";
 
-            setTimeout(typeText, 100);
+    function typeTitle() {
+        if (index < text.length) {
+            title.textContent += text[index];
+            index += 1;
+            setTimeout(typeTitle, 70);
         }
     }
 
-    typeText();
+    typeTitle();
 
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        });
+    });
+
+    year.textContent = new Date().getFullYear();
 });

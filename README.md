@@ -1,41 +1,50 @@
 # Personal Portfolio Website
 
-A responsive personal portfolio website developed to showcase my
-education, technical skills, projects, and contact information.
-
-## About the Project
-
-This project is my personal developer portfolio. It provides an
-overview of my academic background, technical skills, projects,
-and career interests.
-
-The website is designed to be simple, responsive, and user-friendly.
+A responsive personal portfolio website for **Ritesh Rai**, a B.Tech Computer Science Engineering student graduating in 2026.
 
 ## Features
 
-- Responsive design
-- About Me section
-- Technical Skills section
-- Projects section
+- Responsive layout for desktop, tablet, and mobile
+- Professional hero and about sections
+- Categorized technical skills
+- Project showcase with GitHub link
 - Education section
-- Contact section
-- GitHub profile link
+- Contact information
 - JavaScript typing animation
+- Mobile navigation menu
+- Deployed with GitHub Pages
 
-## Technologies Used
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript
 - Git
 - GitHub
+- GitHub Pages
 
 ## Project Structure
 
 ```text
 personal-portfolio/
-│
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
+```
+
+## Run Locally
+
+1. Clone the repository.
+2. Open the project folder in VS Code.
+3. Open `index.html` in a browser.
+
+## Author
+
+**Ritesh Rai**  
+B.Tech Computer Science Engineering  
+Lovely Professional University  
+Jalandhar, Punjab
+
+GitHub: https://github.com/riteshrai9815-lab
+Email: riteshrai9815@gmail.com
